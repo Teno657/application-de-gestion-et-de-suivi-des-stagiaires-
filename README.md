@@ -86,3 +86,15 @@ Validation des données (XSS prevention)
 Sessions sécurisées
 
 Vérification des rôles et permissions
+
+## Installation
+1. Installer XAMPP
+2. Démarrer Apache et MySQL
+3. Importer la base de données
+4. Copier le projet dans le dossier `htdocs`
+5. Accéder à l’application via le navigateur
+
+## Auteur
+Fotso Teno Herman  
+
+Étudiant en GSI – ISH
