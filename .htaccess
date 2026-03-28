@@ -1,0 +1,21 @@
+# Activation du moteur de réécriture
+RewriteEngine On
+
+# Protection contre l'accès direct
+<FilesMatch "\.(php|inc)$">
+    Order Deny,Allow
+    Deny from all
+</FilesMatch>
+
+# Autoriser l'accès aux fichiers API
+<FilesMatch "^(users|tasks|messages|notifications|stats)\.php$">
+    Order Allow,Deny
+    Allow from all
+</FilesMatch>
+
+# Redirection vers HTTPS (décommenter en production)
+# RewriteCond %{HTTPS} off
+# RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
+
+# Empêcher l'affichage du contenu des répertoires
+Options -Indexes
